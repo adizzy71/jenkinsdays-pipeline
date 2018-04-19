@@ -1,9 +1,19 @@
 pipeline {
-  agent any
+  agent {
+    docker {
+      image 'golang:1.10.1-alpine'
+    }
+    
+  }
   stages {
     stage('Stage1') {
       steps {
         echo 'We are in stage 1'
+      }
+    }
+    stage('Jdk Validation') {
+      steps {
+        sh 'java -version'
       }
     }
   }
