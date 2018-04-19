@@ -2,6 +2,7 @@ pipeline {
   agent {
     docker {
       image 'golang:1.10.1-alpine'
+      args 'label \'docker-cloud\''
     }
     
   }
@@ -16,8 +17,5 @@ pipeline {
         sh 'java -version'
       }
     }
-  }
-  environment {
-    JAVA_HOME = 'C:\\Program Files\\Java\\jdk1.8.0_144'
   }
 }
