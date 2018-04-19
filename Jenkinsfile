@@ -2,7 +2,7 @@ pipeline {
   agent {
     docker {
       image 'golang:1.10.1-alpine'
-      args 'label \'docker-cloud\''
+      label 'docker-cloud'
     }
     
   }
