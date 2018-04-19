@@ -14,7 +14,7 @@ pipeline {
     }
     stage('Jdk Validation') {
       steps {
-        sh 'java -version'
+        sh 'ls -l'
       }
     }
   }
